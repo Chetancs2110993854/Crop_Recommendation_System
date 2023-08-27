@@ -1,0 +1,43 @@
+<html>
+    <body bgcolor=#d4a3ae>
+
+        <center>
+
+        <h1> CROP RECOMENDATION SYSTEM </h1><br>
+
+        <form action="{{ url_for('predict')}}"method="post">
+
+            <input type="text" name="nitrogen" placeholder="NITROGEN" required="required"/>
+            <input type="text" name="phosphorus" placeholder="PHOSPHORUS" required="required"/>
+            <input type="text" name="potassium" placeholder="POTASSIUM" required="required"/>
+            <input type="text" name="temperatue" placeholder="TEMPERATURE" required="required"/>
+            <input type="text" name="humidity" placeholder="HUMIDITY" required="required"/>
+            <input type="text" name="ph levels" placeholder="PH LEVELS" required="required"/>
+            <input type="text" name="rainfall" placeholder="RAINFALL" required="required"/>
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+        
+        <!--<b method="POST", action="{{url_for('home')}}">
+           <> NITROGEN (N) :  <input type="text", name='a', placeholder="enter 1"> <br><br>
+            PHOSPHORUS (P) :  <input type="text", name='b', placeholder="enter 2"> <br><br>
+            POTASSIUM (k):  <input type="text", name='c', placeholder="enter 3"> <br><br>
+            Temperature : <input type="text", name='d', placeholder="enter 4"> <br><br>
+            Humidity : <input type="text", name='e', placeholder="enter 5"> <br><br>
+            PH Levels: <input type="text", name='f', placeholder="enter 6"> <br><br> 
+            Rainfall <input type="text", name='g', placeholder="enter 7"> <br><br></b>
+
+            <button type="submit" , value='predict' >predict</button>
+        </form> -->
+        <br>
+        <br>
+
+      <!-- <img src='\static\abc.jpg' alt="ERROR NOT FOUND"><br><br><br>-->
+
+        {{ prediction_text }}
+        
+    </center>
+
+
+    </body>
+</html>
